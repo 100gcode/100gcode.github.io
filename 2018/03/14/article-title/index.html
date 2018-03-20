@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://img2.ph.126.net/pY4NYYf8tM03obY13L--Og==/6597603029798171552.png">
 <meta property="og:image" content="http://img2.ph.126.net/fjTsK4hjz7MqdF-CA1DeTA==/107804916180418316.png">
 <meta property="og:image" content="http://img1.ph.126.net/qsMRV_kKehT1XYwk63Le-Q==/5717536330737834943.png">
-<meta property="og:updated_time" content="2018-03-20T09:58:25.324Z">
+<meta property="og:updated_time" content="2018-03-20T10:48:01.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MAC下基于Hexo+Github.io搭建个人博客">
 <meta name="twitter:description" content="大致步骤：  安装和配置Node.js环境 安装和配置Git环境 Github账户的设置 安装和配置Hexo 将Hexo和Github page联系起来 发布文章 配置主题 添加sitemap和feed插件 添加404公益页面  1. 安装和配置Node.js用于生成静态页面，node.js官网，傻瓜型下一步安装。打开终端验证:  node -vnpm  -v  2. 安装和配置Git环境用于将本">
@@ -190,7 +190,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -200,7 +200,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -264,7 +264,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-14T20:23:00+08:00">
                 2018-03-14
@@ -362,7 +362,7 @@
 </blockquote>
 <p>访问5000的端口</p>
 <p>看到如下页面，Hexo在本地的配置已经全部结束了。<br><img src="http://img2.ph.126.net/pY4NYYf8tM03obY13L--Og==/6597603029798171552.png" alt="image"></p>
-<h4 id="5-将Hexo与Github-page关联起来"><a href="#5-将Hexo与Github-page关联起来" class="headerlink" title="5.将Hexo与Github page关联起来"></a>5.将Hexo与Github page关联起来</h4><h4 id="5-1-配置Git个人信息"><a href="#5-1-配置Git个人信息" class="headerlink" title="5.1 配置Git个人信息"></a>5.1 配置Git个人信息</h4><p>*如果是第一次，需要设置Git的user name和email</p>
+<h4 id="5-将Hexo与Github-page关联起来"><a href="#5-将Hexo与Github-page关联起来" class="headerlink" title="5.将Hexo与Github page关联起来"></a>5.将Hexo与Github page关联起来</h4><h5 id="5-1-配置Git个人信息"><a href="#5-1-配置Git个人信息" class="headerlink" title="5.1 配置Git个人信息"></a>5.1 配置Git个人信息</h5><p>*如果是第一次，需要设置Git的user name和email</p>
 <blockquote>
 <p>git config –global user. name “yourname”<br>git config –global user .email “yourmailname@gmail .com”</p>
 </blockquote>
@@ -394,7 +394,7 @@
 <p>重新生成ssh密钥<br>ssh-keygen -t rsa -C “xxx@xxx .com”  </p>
 <p>接下来正常操作<br>在github上添加公钥public-key：<br>1、首先在你的终端运行 xclip -sel c ~/.ssh/id_rsa.pub将公钥内容复制到剪切板<br>2、在github在添加公钥时，直接复制即可<br>3、保存  </p>
 <p>测试：<br>在终端 ssh -T git@github .com</p>
-<h4 id="5-2-配置Deployment"><a href="#5-2-配置Deployment" class="headerlink" title="5.2 配置Deployment"></a>5.2 配置Deployment</h4><p>在文件夹中，找到_config.yml文件，修改repo值</p>
+<h5 id="5-2-配置Deployment"><a href="#5-2-配置Deployment" class="headerlink" title="5.2 配置Deployment"></a>5.2 配置Deployment</h5><p>在文件夹中，找到_config.yml文件，修改repo值</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:100gcode/100gcode.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>repo值是你github项目里的ssh<br><img src="http://img1.ph.126.net/qsMRV_kKehT1XYwk63Le-Q==/5717536330737834943.png" alt="image"></p>
 <h4 id="6-发布文章"><a href="#6-发布文章" class="headerlink" title="6. 发布文章"></a>6. 发布文章</h4><p>新建一篇博客，执行命令后，在 \ source \ _posts 下将会看到 article title.md文件</p>
@@ -417,17 +417,17 @@
 <blockquote>
 <p>npm install hexo-deployer-git –save</p>
 </blockquote>
-<h4 id="7-配置主题"><a href="#7-配置主题" class="headerlink" title="7. 配置主题"></a>7. 配置主题</h4><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网主题页</a>搜寻自己喜欢的主题。以hexo-theme-aloha为例  </p>
+<h4 id="7-配置主题"><a href="#7-配置主题" class="headerlink" title="7. 配置主题"></a>7. 配置主题</h4><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官网主题页</a>搜寻自己喜欢的主题。以hexo-theme-next为例  </p>
 <p>终端cd到blog目录下执行</p>
 <blockquote>
-<p>git clone https: //github .com/henryhuang/hexo-theme-aloha.git themes/aloha</p>
+<p>git clone https: //github .com/iissnan/hexo-theme-next themes/next</p>
 </blockquote>
-<p>将blog 目录下 _config.yml里的theme的值修改为aloha</p>
+<p>将blog 目录下 _config.yml里的theme的值修改为next</p>
 <p>终端cd到blog目录下执行</p>
 <blockquote>
 <p>hexo clean //清除缓存文件（db.json）和已生成的静态文件（public）<br>hexo g //生成缓存和静态文件<br>hexo d //重新部署到服务器</p>
 </blockquote>
-<p>如果要修改theme内容，比如名称，描述，头像等去修改_config.yml文件和theme/aloha/_config.yml 文件中对应的属性名称即可。冒号: 后加空格。</p>
+<p>找了几个主题，NexT的功能非常丰富，<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">文档</a>相当完善。</p>
 
       
     </div>
@@ -518,10 +518,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Table Des Matières
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Ensemble
           </li>
         </ul>
       
@@ -542,7 +542,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">articles</span>
                 </a>
               </div>
             
@@ -555,7 +555,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -587,7 +587,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装和配置Node-js"><span class="nav-number">1.</span> <span class="nav-text">1. 安装和配置Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装和配置Git环境"><span class="nav-number">2.</span> <span class="nav-text">2. 安装和配置Git环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Github账户的设置"><span class="nav-number">3.</span> <span class="nav-text">3. Github账户的设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-安装和配置Hexo"><span class="nav-number">4.</span> <span class="nav-text">4.安装和配置Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-将Hexo与Github-page关联起来"><span class="nav-number">5.</span> <span class="nav-text">5.将Hexo与Github page关联起来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-配置Git个人信息"><span class="nav-number">6.</span> <span class="nav-text">5.1 配置Git个人信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-配置Deployment"><span class="nav-number">7.</span> <span class="nav-text">5.2 配置Deployment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-发布文章"><span class="nav-number">8.</span> <span class="nav-text">6. 发布文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-配置主题"><span class="nav-number">9.</span> <span class="nav-text">7. 配置主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装和配置Node-js"><span class="nav-number">1.</span> <span class="nav-text">1. 安装和配置Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装和配置Git环境"><span class="nav-number">2.</span> <span class="nav-text">2. 安装和配置Git环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Github账户的设置"><span class="nav-number">3.</span> <span class="nav-text">3. Github账户的设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-安装和配置Hexo"><span class="nav-number">4.</span> <span class="nav-text">4.安装和配置Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-将Hexo与Github-page关联起来"><span class="nav-number">5.</span> <span class="nav-text">5.将Hexo与Github page关联起来</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-配置Git个人信息"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 配置Git个人信息</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-配置Deployment"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 配置Deployment</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-发布文章"><span class="nav-number">6.</span> <span class="nav-text">6. 发布文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-配置主题"><span class="nav-number">7.</span> <span class="nav-text">7. 配置主题</span></a></li></ol></div>
             
 
           </div>
@@ -617,7 +617,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -625,7 +625,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
